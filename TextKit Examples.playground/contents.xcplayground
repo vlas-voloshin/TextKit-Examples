@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='1 - Shared Text Storage'/>
+        <page name='2 - Columns and Exclusion Paths'/>
+        <page name='3 - Geometry Querying'/>
+        <page name='4 - Manual Truncation'/>
+        <page name='5 - Text Attachments'/>
+    </pages>
+</playground>
