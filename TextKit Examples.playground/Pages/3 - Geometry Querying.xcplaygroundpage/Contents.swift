@@ -10,7 +10,7 @@ import PlaygroundSupport
 let lorem = try! String(contentsOf: #fileLiteral(resourceName: "lorem-ipsum.txt")) + "\n"
 let longLorem = String(repeating: lorem, count: 4)
 let attributedLorem = NSAttributedString(string: longLorem, attributes: [
-    NSFontAttributeName : UIFont.systemFont(ofSize: 16)
+    .font : UIFont.systemFont(ofSize: 16)
 ])
 
 // Static text view
@@ -21,9 +21,9 @@ textView.isSelectable = false
 textView.isScrollEnabled = false
 
 // Add fancier fonts to spice things up a bit
-textView.textStorage.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFont(ofSize: 24), range: NSRange(location: 50, length: 50))
-textView.textStorage.addAttribute(NSFontAttributeName, value: UIFont(name: "Zapfino", size: 18)!, range: NSRange(location: 149, length: 50))
-textView.textStorage.addAttribute(NSFontAttributeName, value: UIFont(name: "Copperplate", size: 30)!, range: NSRange(location: 301, length: 49))
+textView.textStorage.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 24), range: NSRange(location: 50, length: 50))
+textView.textStorage.addAttribute(.font, value: UIFont(name: "Zapfino", size: 18)!, range: NSRange(location: 149, length: 50))
+textView.textStorage.addAttribute(.font, value: UIFont(name: "Copperplate", size: 30)!, range: NSRange(location: 301, length: 49))
 
 // Add a "text painter" for the text view
 let painter = TextPainter()

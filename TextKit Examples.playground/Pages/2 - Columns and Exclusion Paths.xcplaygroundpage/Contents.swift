@@ -10,16 +10,16 @@ import PlaygroundSupport
 let lorem = try! String(contentsOf: #fileLiteral(resourceName: "lorem-ipsum.txt")) + "\n"
 let longLorem = String(repeating: lorem, count: 4)
 let attributedLorem = NSAttributedString(string: longLorem, attributes: [
-    NSFontAttributeName : UIFont.systemFont(ofSize: 16)
+    .font : UIFont.systemFont(ofSize: 16)
 ])
 
 // Text containers
-let leftContainer = NSTextContainer(size: CGSize.zero)
+let leftContainer = NSTextContainer(size: .zero)
 leftContainer.lineFragmentPadding = 16
 leftContainer.widthTracksTextView = true
 leftContainer.heightTracksTextView = true
 
-let rightContainer = NSTextContainer(size: CGSize.zero)
+let rightContainer = NSTextContainer(size: .zero)
 rightContainer.lineFragmentPadding = 16
 rightContainer.widthTracksTextView = true
 rightContainer.heightTracksTextView = true
@@ -35,12 +35,12 @@ let textStorage = NSTextStorage(attributedString: attributedLorem)
 textStorage.addLayoutManager(layoutManager)
 
 // Text views
-let leftTextView = UITextView(frame: CGRect.zero, textContainer: leftContainer)
+let leftTextView = UITextView(frame: .zero, textContainer: leftContainer)
 leftTextView.isScrollEnabled = false
 leftTextView.translatesAutoresizingMaskIntoConstraints = false
 leftTextView.layer.borderWidth = 2
 
-let rightTextView = UITextView(frame: CGRect.zero, textContainer: rightContainer)
+let rightTextView = UITextView(frame: .zero, textContainer: rightContainer)
 rightTextView.isScrollEnabled = false
 rightTextView.translatesAutoresizingMaskIntoConstraints = false
 rightTextView.layer.borderWidth = 2

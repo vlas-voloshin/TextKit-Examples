@@ -10,8 +10,8 @@ import PlaygroundSupport
 let lorem = try! String(contentsOf: #fileLiteral(resourceName: "lorem-ipsum.txt")) + "\n"
 let longLorem = String(repeating: lorem, count: 2)
 let attributedLorem = NSAttributedString(string: longLorem, attributes: [
-    NSFontAttributeName : UIFont.systemFont(ofSize: 16)
-    ])
+    .font : UIFont.systemFont(ofSize: 16)
+])
 
 // Static text view
 let textView = UITextView(frame: CGRect(x: 0, y: 0, width: 320, height: 480))

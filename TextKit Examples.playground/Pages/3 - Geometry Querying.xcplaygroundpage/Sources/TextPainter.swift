@@ -49,7 +49,7 @@ extension UITextView {
             return
         }
 
-        self.textStorage.addAttribute(NSBackgroundColorAttributeName, value: color, range: NSRange(location: Int(characterIndex), length: 1))
+        self.textStorage.addAttribute(.backgroundColor, value: color, range: NSRange(location: Int(characterIndex), length: 1))
     }
     
 }

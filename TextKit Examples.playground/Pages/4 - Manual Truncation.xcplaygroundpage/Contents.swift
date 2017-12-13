@@ -9,11 +9,11 @@ import PlaygroundSupport
 // Lorem ipsum
 let lorem = try! String(contentsOf: #fileLiteral(resourceName: "lorem-ipsum.txt")) + "\n"
 let attributedLorem = NSAttributedString(string: lorem, attributes: [
-    NSFontAttributeName : UIFont.systemFont(ofSize: 16)
+    .font : UIFont.systemFont(ofSize: 16)
 ])
 
 // Text views
-let leftTextView = UITextView(frame: CGRect.zero)
+let leftTextView = UITextView(frame: .zero)
 leftTextView.attributedText = attributedLorem
 leftTextView.translatesAutoresizingMaskIntoConstraints = false
 leftTextView.layer.borderWidth = 2
@@ -45,7 +45,7 @@ let updateTruncatedText = {
 
     if hasTruncated && truncatedText.length > 0 {
         var lastCharacterAttributes = truncatedText.attributes(at: truncatedText.length - 1, effectiveRange: nil)
-        lastCharacterAttributes[NSForegroundColorAttributeName] = UIColor.blue
+        lastCharacterAttributes[.foregroundColor] = UIColor.blue
         let extraText = NSAttributedString(string: "\n(there's more)", attributes: lastCharacterAttributes)
 
         rightTextView.textStorage.append(extraText)
